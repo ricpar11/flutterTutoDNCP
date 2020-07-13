@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/globalState.dart';
 import 'package:provider/provider.dart';
 
-class Pagina2 extends StatelessWidget {
+class Pagina2 extends StatefulWidget {
+  @override
+  _Pagina2State createState() => _Pagina2State();
+}
+
+class _Pagina2State extends State<Pagina2> {
+  bool showPlaceholder = false;
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -15,13 +22,19 @@ class Pagina2 extends StatelessWidget {
             backgroundColor: snapshot.backgroundColor,
           ),
           body: SafeArea(
-            child: Center(
-              child: RaisedButton(
-                child: Text("Cuerpo de la pagina 2"),
-                onPressed: () {
-                  snapshot.backgroundColor = Colors.red;
-                },
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                RaisedButton(
+                  child: Text("Mostrar nuevo placeholder"),
+                  onPressed: () {},
+                ),
+                if (showPlaceholder)
+                  Placeholder(
+                    color: snapshot.backgroundColor,
+                  )
+              ],
             ),
           ),
         );

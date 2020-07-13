@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class GlobalStateChangeNotifier with ChangeNotifier {
-  Color _backgroundColor = Colors.white;
+  Color _backgroundColor = Colors.redAccent;
 
   Color get backgroundColor => _backgroundColor;
 

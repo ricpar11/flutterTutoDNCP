@@ -61,11 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
-              onPressed: () => _paginaHandler(Pagina2),
+              onPressed: () => _paginaHandler(Pagina2()),
               child: Text("Pagina 2"),
             ),
             RaisedButton(
-              onPressed: () => _paginaHandler(Pagina3),
+              onPressed: () => _paginaHandler(Pagina3()),
               child: Text("Pagina 3"),
             ),
             RaisedButton(
